@@ -203,12 +203,12 @@ public class Player : MonoBehaviour
                 if (move < 0)
                 {
                     transform.localScale = new Vector3(-1, 1, 1);
-                    GetComponent<Rigidbody2D>().velocity = new Vector2(-1 * moveSpeed, GetComponent<Rigidbody2D>().velocity.y);
+                    GetComponent<Rigidbody2D>().velocity = new Vector2(moveSpeed * move * Time.deltaTime, GetComponent<Rigidbody2D>().velocity.y);
                 }
                 else
                 {
                     transform.localScale = new Vector3(1, 1, 1);
-                    GetComponent<Rigidbody2D>().velocity = new Vector2(1 * moveSpeed, GetComponent<Rigidbody2D>().velocity.y);
+                    GetComponent<Rigidbody2D>().velocity = new Vector2(moveSpeed * move * Time.deltaTime, GetComponent<Rigidbody2D>().velocity.y);
                 }
 
                 
